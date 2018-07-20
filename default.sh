@@ -33,7 +33,7 @@ else
     export BASH_CONFIG="$HOME/.bash_profile"
 fi
 
-sudo chown -R $USER:$(id -gn $USER)$BASH_CONFIG
+sudo chown -R $USER:$(id -gn $USER) $BASH_CONFIG
 if ! grep -q "powerline-shell" $BASH_CONFIG; then
     echo "function _update_ps1() {" >> $BASH_CONFIG
     echo "    PS1=\$(powerline-shell \$?)" >> $BASH_CONFIG
