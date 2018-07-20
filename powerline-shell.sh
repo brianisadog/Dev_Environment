@@ -33,3 +33,4 @@ fi
 cd ..
 sudo rm -rf powerline-shell/
 echo ">>> Powerline-shell has been installed, please restart the terminal."
+echo ">>> Make sure to use powerline's fonts on your terminal."
