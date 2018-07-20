@@ -1,2 +1,2 @@
 all:
-	./default.sh
+	./install.sh
