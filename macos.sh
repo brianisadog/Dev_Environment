@@ -14,3 +14,4 @@ curl -O https://bootstrap.pypa.io/get-pip.py
 sudo python3 get-pip.py
 rm -f get-pip.py
 pip3 install pipenv
+pip install speedtest-cli
