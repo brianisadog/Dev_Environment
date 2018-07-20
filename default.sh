@@ -1,11 +1,15 @@
 #!/bin/bash
 
-echo ">>> Proceeding update, upgrade, and installing default packages..."
-sudo apt-get update && sudo apt-get upgrade -y \
-    && sudo apt-get install -y emacs curl openssh-server
+echo ">>> Proceeding update and upgrade..."
+sudo apt-get update && sudo apt-get upgrade -y
 
 echo ">>> Installing Python2.7 for Installing Powerline-shell..."
 sudo apt-get install -y python2.7 python-pip
+
+echo ">>> Installing commonly-used packages..."
+sudo apt-get install -y pyhthon3.6 python3-pip emacs curl openssh-server logrotate cron gcc \
+    && sudo apt-get install -y libmysqlclient-dev || sudo apt-get install -y default-libmysqlclient-dev \
+    && pip3 install pipenv
 
 echo ">>> Setting emacs' environment, using 4 spaces..."
 echo "(setq-default indent-tabs-mode nil)" > ~/.emacs
@@ -39,7 +43,7 @@ if ! grep -q "powerline-shell" $BASH_CONFIG; then
     echo "    PS1=\$(powerline-shell \$?)" >> $BASH_CONFIG
     echo "}" >> $BASH_CONFIG
     echo "if [[ \$TERM != linux && ! \$PROMPT_COMMAND =~ _update_ps1 ]]; then" >> $BASH_CONFIG
-    echo "PROMPT_COMMAND=\"_update_ps1; \$PROMPT_COMMAND\"" >> $BASH_CONFIG
+    echo "    PROMPT_COMMAND=\"_update_ps1; \$PROMPT_COMMAND\"" >> $BASH_CONFIG
     echo "fi" >> $BASH_CONFIG
 fi
 
