@@ -10,7 +10,7 @@ echo ">>> Installing commonly-used packages..."
 sudo apt-get install -y pyhthon3.6 python3-pip emacs curl openssh-server logrotate cron gcc \
     && sudo apt-get install -y libmysqlclient-dev || sudo apt-get install -y default-libmysqlclient-dev \
     && pip3 install pipenv \
-    && pip install speedtest-cli
+    && sudo pip install speedtest-cli
 
 echo ">>> Cleaning packages..."
 sudo apt-get autoremove -y && sudo apt-get autoclean -y
