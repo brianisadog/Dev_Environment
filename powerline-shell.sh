@@ -16,7 +16,7 @@ if [ -e ~/.bashrc ]; then
     echo ">>> Installing for Linux..."
     export BASH_CONFIG="$HOME/.bashrc"
 else
-    echo ">>> Installing for OSX..."
+    echo ">>> Installing for macOS..."
     export BASH_CONFIG="$HOME/.bash_profile"
 fi
 

@@ -11,11 +11,5 @@ sudo apt-get install -y pyhthon3.6 python3-pip emacs curl openssh-server logrota
     && sudo apt-get install -y libmysqlclient-dev || sudo apt-get install -y default-libmysqlclient-dev \
     && pip3 install pipenv
 
-echo ">>> Setting emacs' environment, using 4 spaces..."
-echo "(setq-default indent-tabs-mode nil)" > ~/.emacs
-echo "(setq tab-width 4)" >> ~/.emacs
-echo "(setq-default c-basic-offset 4)" >> ~/.emacs
-echo "(setq make-backup-files nil)" >> ~/.emacs
-
 echo ">>> Cleaning packages..."
 sudo apt-get autoremove -y && sudo apt-get autoclean -y
