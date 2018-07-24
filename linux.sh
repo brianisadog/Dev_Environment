@@ -7,7 +7,7 @@ echo ">>> Installing Python2.7 for Installing Powerline-shell..."
 sudo apt-get install -y python2.7 python-pip
 
 echo ">>> Installing commonly-used packages..."
-sudo apt-get install -y pyhthon3.6 python3-pip emacs curl openssh-server logrotate cron gcc wget zsh \
+sudo apt-get install -y python3.6 python3-pip emacs curl openssh-server logrotate cron gcc wget zsh \
     && sudo apt-get install -y libmysqlclient-dev || sudo apt-get install -y default-libmysqlclient-dev \
     && pip3 install pipenv \
     && sudo pip install speedtest-cli
