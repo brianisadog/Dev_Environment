@@ -5,7 +5,7 @@ rm -rf $HOME/.oh-my-zsh/
 wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh \
     -O zsh_install.sh && \
     chmod +x zsh_install.sh && \
-    sed -i "s/env zsh -l//g" zsh_install.sh && \
+    sed -i -e "s/env zsh -l//g" zsh_install.sh && \
     ./zsh_install.sh && \
     rm -f zsh_install.sh && \
     cp ./robbyrussell.zsh-theme \
