@@ -9,7 +9,7 @@ brew install python@2
 sudo easy_install pip
 
 echo ">>> Installing commonly-used packages..."
-brew install python3 emacs gcc openssh curl
+brew install python3 emacs gcc openssh curl wget
 curl -O https://bootstrap.pypa.io/get-pip.py
 sudo python3 get-pip.py
 rm -f get-pip.py

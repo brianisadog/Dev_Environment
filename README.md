@@ -4,7 +4,7 @@
 
 - On either Linux or macOS
 
-## Install
+## Installation
 
 ```shell
 git clone https://www.github.com/brianisadog/Dev_Environment
