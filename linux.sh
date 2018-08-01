@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo ">>> locating python3.6 package..."
+echo ">>> Locating python3.6 package..."
 sudo add-apt-repository ppa:jonathonf/python-3.6
 
 echo ">>> Proceeding update and upgrade..."

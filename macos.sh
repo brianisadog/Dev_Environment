@@ -15,3 +15,7 @@ sudo python3 get-pip.py
 rm -f get-pip.py
 pip3 install pipenv
 pip install speedtest-cli
+
+echo ">>> Installing docker and docker-compose"
+brew install docker docker-compose
+sudo 
