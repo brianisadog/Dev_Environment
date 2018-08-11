@@ -16,15 +16,6 @@ rm -f get-pip.py
 pip3 install pipenv
 pip install speedtest-cli
 
-echo ">>> Installing docker and docker-compose"
-brew install docker docker-compose docker-machine xhyve docker-machine-driver-xhyve
-sudo chown root:wheel $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
-sudo chmod u+s $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
-docker-machine create default --driver xhyve --xhyve-experimental-nfs-share
-eval $(docker-machine env default)
-docker-machine stop
-echo ">>> Docker installed successfully, to enable docker \"$ docker-machine start\""
-
 echo ">>> Installing megadecryptor..."
 git clone https://github.com/denysvitali/megadecrypter
 cd megadecrypter/
@@ -34,3 +25,15 @@ sudo mv ./megadecrypter /usr/local/bin/
 cd ..
 rm -rf megadecrypter
 brew uninstall libevent bdw-gc llvm@5 pcre crystal
+
+echo ">>> Installing Java jre and jdk..."
+brew cask install java
+
+echo ">>> Installing docker and docker-compose"
+brew install docker docker-compose docker-machine xhyve docker-machine-driver-xhyve
+sudo chown root:wheel $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
+sudo chmod u+s $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
+docker-machine create default --driver xhyve --xhyve-experimental-nfs-share
+eval $(docker-machine env default)
+docker-machine stop
+echo ">>> Docker installed successfully, to enable docker \"$ docker-machine start\""
