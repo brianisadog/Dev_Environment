@@ -8,6 +8,7 @@ wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/insta
     sed -i -e "s/env zsh -l//g" zsh_install.sh && \
     ./zsh_install.sh && \
     rm -f zsh_install.sh* && \
+    sed -i -e "s/plugins=(/plugins=(sudo brew docker web-search /g" $HOME/.zshrc && \
     cp ./robbyrussell.zsh-theme \
        $HOME/.oh-my-zsh/custom/themes/robbyrussell.zsh-theme
 
